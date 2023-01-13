@@ -1,0 +1,125 @@
+.backimage{
+    background-image: url("../image/rail.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+.navDiv{
+    padding: 10px;
+    font-weight: bold;
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.navbutton{
+    font-size: 24px;
+    padding: 4px;
+    text-decoration: none;
+}
+.login-form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+  }
+  /* Style for the form inputs */
+  .login-form input {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  /* Style for the submit button */
+  .login-form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+
+  .registration-form {
+    width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+  }
+  /* Style for the form inputs */
+  .registration-form input, .registration-form select {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  /* Style for the submit button */
+  .registration-form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+
+      /* Style for the search form */
+      .search-form {
+        width: 300px;
+        margin: 0 auto;
+        padding: 30px;
+        border: 1px solid #ccc;
+      }
+      /* Style for the form inputs */
+      .search-form input {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 12px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+      /* Style for the submit button */
+      .search-form input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+      }
+      /* Style for the train information table */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th, td {
+        border: 1px solid #ccc;
+        padding: 12px;
+        text-align: left;
+      }
+
+      /* Style for the contact form */
+    .contact-form {
+        width: 600px;
+        margin: 0 auto;
+        padding: 30px;
+        border: 1px solid #ccc;
+      }
+      /* Style for the form inputs */
+      .contact-form input, .contact-form textarea {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 12px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+      /* Style for the submit button */
+      .contact-form input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+      }
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
