@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $check_result = mysqli_query($conn, $check_query);
 
     if(mysqli_num_rows($check_result) > 0){
-        $sql = "INSERT INTO user (phone) VALUES ('$phone')";
+        $sql = "INSERT INTO active (phone) VALUES ('$phone')";
         mysqli_query($conn, $sql);
         echo "<script>alert('Login Successful');</script>";
     }
