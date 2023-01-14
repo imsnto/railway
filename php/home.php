@@ -13,7 +13,7 @@ session_start();
             <div class = "navDiv">
                 <a class = "navbutton" href="home.php"> Home </a>
                 <a class = "navbutton" href="login.php"> Login </a>
-                <a class = "navbutton" href="Register.php"> Register </a>
+                <a class = "navbutton" href="register.php"> Register </a>
                 <a class = "navbutton" href="train.php"> Train Information </a>
                 <a class = "navbutton" href="contact.php"> Contact Us </a>
             </div>

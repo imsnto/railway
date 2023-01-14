@@ -3,17 +3,19 @@ include("connection.php");
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
+    $phone = $_POST['phone'];
     $password = $_POST['password'];
 
-    $sql = "INSERT INTO login (username, password) VALUES ('$username', '$password')";
-    $result = mysqli_query($conn, $sql); 
+    $check_query = "SELECT phone, password FROM users WHERE phone = '$phone' AND password = '$password'";
+    $check_result = mysqli_query($conn, $check_query);
 
-    if(!$result){
-        echo "<script>alert('Login unsuccessful');</script>";
+    if(mysqli_num_rows($check_result) > 0){
+        $sql = "INSERT INTO user (phone) VALUES ('$phone')";
+        mysqli_query($conn, $sql);
+        echo "<script>alert('Login Successful');</script>";
     }
     else {
-        echo "<script>alert('Login Successful');</script>";
+        echo "<script>alert('Login Unsuccessful');</script>";
     }
 }
 ?>
@@ -36,8 +38,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <br> <br> <br> <br> <br>
 
         <form class="login-form" method = "post" action = "login.php">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+            <label for="phone">Phone:</label>
+            <input type="text" id="phone" name="phone" required>
         
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>

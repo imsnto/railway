@@ -1,5 +1,32 @@
 <?php 
+include("connection.php");
 session_start();
+
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $confirm_password = $_POST['confirm_password'];
+    $nid = $_POST['nid'];
+    $phone = $_POST['phone'];
+
+    $check_query = "SELECT phone FROM users WHERE phone = '$phone'";
+    $result = mysqli_query($conn, $check_query);
+    
+    if (mysqli_num_rows($result) > 0) {
+        echo "<script type='text/javascript'> alert('Registration unsuccessfull'); </script>";        
+    }
+    else{
+        $query = "INSERT INTO users( name, phone, email, nid, password) VALUES('$name', '$phone', '$email', '$nid', '$password')";
+        $result = mysqli_query($conn, $query);
+        if($result) {
+            echo "<script type='text/javascript'> alert('Registration successfully'); </script>";
+        }
+        else{
+            echo "<script type='text/javascript'> alert('Registration unsuccessfull data insert failed'); </script>";
+        }
+    }
+}
 ?>
 <!DOCTYPE html> 
     <head> 
@@ -19,7 +46,7 @@ session_start();
 
         <br> <br> <br> <br> <br>
 
-        <form class="registration-form" onsubmit="return validateForm()">
+        <form class="registration-form" method = "post" action = "register.php">
             <h2>Railway Reservation Form</h2>
         
             <label for="name">Name:</label>
@@ -34,16 +61,12 @@ session_start();
 
             <label for="nid">NID:</label>
             <input type="text" id="nid" name="nid" required>
-            
-            <label for="gender">Gender:</label>
-            <select id="gender" name="gender">
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
-            </select>
-            
-            <label for="date">DOB</label>
-            <input type="date" id="date" name="date" required>
+
+            <label for = "password"> Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="password"> Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
 
             <input type="submit" value="Submit">
         </form>
