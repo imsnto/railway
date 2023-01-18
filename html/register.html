@@ -6,17 +6,17 @@
     <body class = "backimage"> 
         <nav class = "homeNav" > 
             <div class = "navDiv">
-                <a class = "navbutton" href="home.html"> Home </a>
-                <a class = "navbutton" href="login.html"> Login </a>
-                <a class = "navbutton" href="Register.html"> Register </a>
-                <a class = "navbutton" href="train.html"> Train Information </a>
-                <a class = "navbutton" href="contact.html"> Contact Us </a>
+                <a class = "navbutton" href="home.php"> Home </a>
+                <a class = "navbutton" href="login.php"> Login </a>
+                <a class = "navbutton" href="register.php"> Register </a>
+                <a class = "navbutton" href="train.php"> Train Information </a>
+                <a class = "navbutton" href="contact.php"> Contact Us </a>
             </div>
         </nav>
 
         <br> <br> <br> <br> <br>
 
-        <form class="registration-form" onsubmit="return validateForm()">
+        <form class="registration-form" method = "post" action = "register.php">
             <h2>Railway Reservation Form</h2>
         
             <label for="name">Name:</label>
@@ -31,16 +31,12 @@
 
             <label for="nid">NID:</label>
             <input type="text" id="nid" name="nid" required>
-            
-            <label for="gender">Gender:</label>
-            <select id="gender" name="gender">
-              <option value="male">Male</option>
-              <option value="female">Female</option>
-              <option value="other">Other</option>
-            </select>
-            
-            <label for="date">DOB</label>
-            <input type="date" id="date" name="date" required>
+
+            <label for = "password"> Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="password"> Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required>
 
             <input type="submit" value="Submit">
         </form>

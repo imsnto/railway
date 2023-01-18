@@ -1,6 +1,5 @@
 <?php 
-include 'home.html';
 session_start();
-
+include("../html/home.html");
 ?>
 
