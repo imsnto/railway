@@ -1,13 +1,10 @@
-<?php 
-session_start();
-?>
-<html>
-    <head>
-        <title></title>
+<!DOCTYPE html> 
+    <head> 
+        <title> Home </title>
         <link rel="stylesheet" href="../css/style.css" >
-
     </head>
     <body class = "backimage"> 
+
         <nav class = "homeNav" > 
             <div class = "navDiv">
                 <a class = "navbutton" href="home.php"> Home </a>
@@ -23,7 +20,8 @@ session_start();
         </header>
 
         <br> <br> <br> <br>
-    <form class = "home_form" method = "post" action = "home.php"> 
+
+        <form class = "home_form" method = "post" action = "home.php"> 
             <div>
                 <label for = "from" > From </label>
                 <input type = "text" id = "from" name = "from" placeholder = "From Station">
@@ -41,6 +39,7 @@ session_start();
                 <input type = "text" id = "clas" name = "clas" placeholder = "Choose a class">
             </div>
         </form>
+
 
     </body>
 </html>

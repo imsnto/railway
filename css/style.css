@@ -123,3 +123,30 @@ header {
     text-align: center;
     padding: 1em;
 }
+
+.home_form {
+  width: 50%; /* set the width of the form to 50% of the container */
+  margin: 0 auto; /* center the form horizontally */
+  padding: 30px; /* add some padding to the form */
+  border: 1px solid #ccc; /* add a border to the form */
+  background-color: #f2f2f2; /* add a background color to the form */
+  box-shadow: 0 0 10px #ccc; /* add a box shadow to the form */
+}
+
+.home_form label {
+  font-weight: bold; /* make the labels bold */
+  display: block; /* display the labels as block elements */
+  margin-bottom: 10px; /* add some margin to the bottom of the labels */
+}
+
+.home_form input {
+  width: 100%; /* make the input fields take up the full width of the form */
+  margin-bottom: 20px; /* add some margin to the bottom of the input fields */
+  padding: 12px; /* add some padding to the input fields */
+  border: 1px solid #ccc; /* add a border to the input fields */
+  box-sizing: border-box; /* include the border and padding in the size of the input fields */
+}
+
+.home_form input[type="date"] {
+  background-color: #fff; /* change the background color of date input field */
+}
