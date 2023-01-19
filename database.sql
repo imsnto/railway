@@ -42,4 +42,25 @@ CREATE TABLE `active` (
   CONSTRAINT `active_ibfk_1` FOREIGN KEY (`phone`) REFERENCES `users` (`phone`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 
+INSERT INTO route (tr_no, src, dest) VALUES (401, 'khulna', 'jashore'), (401, 'khulna', 'kotchadpur');
+
+INSERT INTO train(tr_no, tr_name, source, dest, available_seat) VALUES (401, 'lalmoni express', 'khulna', 'dinajpur', 890), 
+(402, 'lalmoni express', 'dinajpur', 'khulna', 900);
+
+INSERT INTO train (tr_no, tr_name, source, dest, available_seat) VALUES (501, 'turna express', 'khulna', 'gopalganj', 800) , 
+(502, 'turna express', 'gopalganj', 'khulna', 800);
+
+
+
+INSERT INTO route(tr_no, src, dest) VALUES 
+(702, 'dhaka', 'khulna'), 
+(702, 'dhaka', 'jashore'), 
+(702, 'dhaka', 'kotchadpur');
+
+INSERT INTO route(tr_no, src, dest) VALUES 
+(701, 'khulna', 'dhaka'), 
+(701, 'khulna', 'jashore');
+
+
+
 
