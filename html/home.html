@@ -21,22 +21,39 @@
 
         <br> <br> <br> <br>
 
-        <form class = "homeform" method = "post" action = "home.php"> 
+        <form class = "homeform" style = "  width: 50%; margin: 0 auto;padding: 30px; border: 1px solid #ccc;background-color: #f2f2f2; box-shadow: 0 0 10px #ccc; " method = "post" action = "home.php"> 
             <div>
                 <label for = "from" > From </label>
-                <input type = "text" id = "from" name = "from" placeholder = "From Station">
+                <input style = "  width: 100%; 
+                margin-bottom: 20px; 
+                padding: 12px; 
+                border: 1px solid #ccc; 
+                box-sizing: border-box;" type = "text" id = "from" name = "from" placeholder = "From Station">
                 <br> <br>
 
                 <label for = "to"> To </label>
-                <input type = "text" id = "to" name = "to" placeholder = "To Station">
+                <input style = "  width: 100%; 
+                margin-bottom: 20px; 
+                padding: 12px; 
+                border: 1px solid #ccc; 
+                box-sizing: border-box;" type = "text" id = "to" name = "to" placeholder = "To Station">
                 <br> <br>
 
                 <label for = "doj">Date of Journey</label>
-                <input type = "date" id = "doj" name = "doj" placeholder = "Pick a date">
+                <input style = "  width: 100%; margin-bottom: 20px; padding: 12px; border: 1px solid #ccc; box-sizing: border-box;" type = "date" id = "doj" name = "doj" placeholder = "Pick a date">
                 <br> <br>
 
-                <label for = "clas">Choose Class</label>
-                <input type = "text" id = "clas" name = "clas" placeholder = "Choose a class">
+                <label for = "ticket-class">Choose Class</label>
+
+                <select id = "ticket-class" name = "ticket-class" style = "margin-left: 50px; width: 50% ;padding: 8px; "> 
+                    <option value = "">Choose a class</option>
+                    <option value = "snigdha">SNIGDHA</option>
+                    <option value = "shovon">SHOVAN</option>
+                    <option value = "s-chair">S_CHAIR</option>
+                </select>
+                <br> <br>
+
+                <input style="margin-left:200px; background-color: #4CAF50; color: white; cursor: pointer; text-align: center; width: 25% ;padding: 8px;" type="submit" value="Search Train">
             </div>
         </form>
 

@@ -16,10 +16,15 @@
 
         <br> <br> <br> <br> <br>
 
-        <form class="search-form" onsubmit="return searchTrain()">
-            <label for="train-number">Train Number:</label>
-            <input type="text" id="train-number" name="train-number" required>
-        
+        <form class="search-form" method="post" >
+            <label for="train-number">Train Name:</label>
+            <select style = "margin-left: 50px; width: 50% ;padding: 8px;" name = "train-name" id = "train-name"> 
+                <option value = "lalmoni express">Lalmoni Express</option>
+                <option value = "ekota express">Ekota Express</option>
+                <option value = "rocket" >Rocket Express</option>
+            </select>
+            <br> <br> <br>
+
             <input type="submit" value="Search">
           </form>
     </body>

@@ -125,12 +125,12 @@ header {
 }
 
 .home_form {
-  width: 50%; /* set the width of the form to 50% of the container */
-  margin: 0 auto; /* center the form horizontally */
-  padding: 30px; /* add some padding to the form */
-  border: 1px solid #ccc; /* add a border to the form */
-  background-color: #f2f2f2; /* add a background color to the form */
-  box-shadow: 0 0 10px #ccc; /* add a box shadow to the form */
+  width: 50%; 
+  margin: 0 auto;
+  padding: 30px; 
+  border: 1px solid #ccc;
+  background-color: #f2f2f2; 
+  box-shadow: 0 0 10px #ccc; 
 }
 
 .home_form label {
@@ -140,11 +140,11 @@ header {
 }
 
 .home_form input {
-  width: 100%; /* make the input fields take up the full width of the form */
-  margin-bottom: 20px; /* add some margin to the bottom of the input fields */
-  padding: 12px; /* add some padding to the input fields */
-  border: 1px solid #ccc; /* add a border to the input fields */
-  box-sizing: border-box; /* include the border and padding in the size of the input fields */
+  width: 100%; 
+  margin-bottom: 20px; 
+  padding: 12px; 
+  border: 1px solid #ccc; 
+  box-sizing: border-box;
 }
 
 .home_form input[type="date"] {
