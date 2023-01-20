@@ -14,8 +14,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $_SESSION['query_result'] = $result;
 
         $no_of_train = mysqli_num_rows($result);    
-        header("Location: show.php");
-        exit;
+        //header("Location: show.php");
+        //exit;
 
         while($row = $result->fetch_assoc()) {
             $str = "Train Number: " . $row['tr_no'] .  '\n' ." Train Name: " . $row['tr_name'] . '\n'. "Source: " . 

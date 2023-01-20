@@ -1,74 +1,90 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Railway Homepage</title>
-  <style>
-    /* Style for the header */
-    header {
-      background-color: #4CAF50;
-      color: white;
-      text-align: center;
-      padding: 1em;
-    }
-    /* Style for the main section */
-    main {
-      padding: 1em;
-    }
-    /* Style for the links */
-    a {
-      color: #4CAF50;
-      text-decoration: none;
-    }
-    /* Style for the train schedule table */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 12px;
-      text-align: left;
-    }
-  </style>
+   <title>Contact Us</title>
+   <style>
+      /*Modal style*/
+      #privacy-policy-modal {
+         position: fixed; /* position the modal in the center of the screen */
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background: rgba(0,0,0,0.5); /* semi-transparent black background */
+         z-index: 1; /* make sure the modal is above other elements */
+         display: none; /* initially hide the modal */
+      }
+
+      #privacy-policy-content {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%,-50%); /* center the modal content */
+         background: #fff;
+         padding: 20px;
+         text-align: center;
+         width: 80%;
+         max-width: 600px;
+      }
+
+      #close-modal-btn {
+         display: block;
+         margin: 20px auto;
+      }
+   </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to Railway</h1>
-  </header>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="schedule.html">Schedule</a>
-    <a href="reservation.html">Reservation</a>
-    <a href="contact.html">Contact Us</a>
-  </nav>
-  <main>
-    <h2>Train Schedule</h2>
-    <table>
-      <tr>
-        <th>Train Number</th>
-        <th>From</th>
-        <th>To</th>
-        <th>Departure Time</th>
-        <th>Arrival Time</th>
-      </tr>
-      <tr>
-        <td>123</td>
-        <td>New York</td>
-        <td>Chicago</td>
-        <td>8:00 AM</td>
-        <td>1:00 PM</td>
-      </tr>
-      <tr>
-        <td>456</td>
-        <td>Los Angeles</td>
-        <td>New York</td>
-        <td>10:00 AM</td>
-        <td>8:00 PM</td>
-      </tr>
-    </table>
-  </main>
-  <footer>
-    <p>Copyright © 2022 Railway</p>
-  </footer>
+   <h1>Contact Us</h1>
+   <h2>For refund of unsuccessful purchases and card charging issues</h2>
+   <table>
+    <tr>
+       <th>Payment Method</th>
+       <th>Merchant ID</th>
+    </tr>
+    <tr>
+       <td>bKash</td>
+       <td>16247</td>
+    </tr>
+    <tr>
+       <td>Nagad</td>
+       <td>16167</td>
+    </tr>
+    <tr>
+       <td>Rocket / DBBL Nexus</td>
+       <td>16216</td>
+    </tr>
+    <tr>
+       <td>Visa / Mastercard</td>
+       <td>N/A</td>
+    </tr>
+ </table>
+ <h2>Refund and Cancellation</h2>
+ <p>Visit your originating station (departure station) and contact refund counter</p>
+ <h2>REFUND POLICY</h2>
+ <p>Tech Support Team</p>
+ <p>Email: support@eticket.railway.gov.bd</p>
+ <h2>TERMS AND CONDITIONS</h2>
+ <p>Please refer to our website for the terms and conditions of our service.</p>
+ <h2>PRIVACY POLICY</h2>
+ <p>Please refer to our website for our privacy policy.</p>
+ <a href="#" id="privacy-policy-link">Privacy Policy</a>
+
+<div id="privacy-policy-modal">
+ <div id="privacy-policy-content">
+    <p>This is the description of our privacy policy. We take the protection of your personal data very seriously and will treat it confidentially in accordance with legal regulations.</p>
+    <p>We collect, process and use your personal data only in accordance with the provisions of the German Data Protection Act (BDSG) and the German Telemedia Act (TMG).</p>
+    <button id="close-modal-btn">Close</button>
+ </div>
+</div>
+
+<script>
+  document.getElementById("privacy-policy-link").addEventListener("click", function(){
+     document.getElementById("privacy-policy-modal").style.display = "block";
+  });
+
+  document.getElementById("close-modal-btn").addEventListener("click", function(){
+     document.getElementById("privacy-policy-modal").style.display = "none";
+  });
+</script>
 </body>
 </html>
