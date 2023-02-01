@@ -3,6 +3,36 @@
 <head> 
     <title> Home </title>
     <link rel="stylesheet" href="../css/style.css" >
+    <style>
+        /*Modal style*/
+        #privacy-policy-modal {
+           position: fixed; /* position the modal in the center of the screen */
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           background: rgba(0,0,0,0.5); /* semi-transparent black background */
+           z-index: 1; /* make sure the modal is above other elements */
+           display: none; /* initially hide the modal */
+        }
+  
+        #privacy-policy-content {
+           position: absolute;
+           top: 50%;
+           left: 50%;
+           transform: translate(-50%,-50%); /* center the modal content */
+           background: #fff;
+           padding: 20px;
+           text-align: center;
+           width: 80%;
+           max-width: 600px;
+        }
+  
+        #close-modal-btn {
+           display: block;
+           margin: 20px auto;
+        }
+     </style>
 </head>
 <body class = "backimage"> 
     <nav class = "homeNav" > 
@@ -45,12 +75,32 @@
       <br> <br>
       <h2>Refund and Cancellation</h2>
       <p>Visit your originating station (departure station) and contact refund counter</p>
-      <a href = "google.com" >REFUND POLICY</a>
+      <a href = "#" >REFUND POLICY</a>
       <h2>Tech Support Team</h2>
       <p>Email: support@eticket.railway.gov.bd</p>
-      <a href=""> <h2>TERMS AND CONDITIONS</h2> </a>
-      <a href = ""><h2>PRIVACY POLICY</h2> </a>     <br> <br> <br>
+      <a href="#" id = "privacy-policy-link"> <h2>TERMS AND CONDITIONS</h2> </a>
 
+      <a href = ""><h2>PRIVACY POLICY</h2> </a>     <br> <br> <br>
+      <div id = "privacy-policy-modal">
+        <div id = "privacy-policy-content">
+            <p> We, at Bangladesh Railway and Shohoz-Synesis-Vincen JV, ensure to maintain the highest standards of transactional security and quality so that your information and details are secure. To know more about our policies please read the following to learn about our information gathering and dissemination practices.</p>
+            <p>Note: Kindly note that our privacy policy is subject to change at any time without prior notice. To ensure that you are aware of any changes, please review this policy at regular intervals.</p>
+            <p>By visiting this Website, you agree to be bound by the terms and conditions of this Privacy Policy. Any disagreement will be subject to the jurisdiction of Bangladesh.</p>
+            <p>By mere use of the Website, you express consent to our use and disclosure of your personal information in accordance with this Privacy Policy. This Privacy Policy is incorporated into and subject to the Terms of Use</p>
+            
+            <button id="close-modal-btn">Close</button>
+        </div>
       </div>
+
+      <script>
+        document.getElementById("privacy-policy-link").addEventListener("click", function(){
+            document.getElementById("privacy-policy-modal").style.display = "block";
+        });
+        document.getElementById("close-modal-btn").addEventListener("click", function(){
+            document.getElementById("privacy-policy-modal").style.display = "none";
+        });
+      </script>
+      </div>
+      
 </body>
 </html>
